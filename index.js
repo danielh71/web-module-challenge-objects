@@ -56,6 +56,13 @@ console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
+function moreReviews(array, name, rating, feedback){
+  array.push({name, rating, feedback});
+  return array;
+}
+
+console.log(moreReviews(reviews, "Daniel", 3, "Not amazing, but not bad.  Service was great.  Would recommend trying this place out"));
+
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
