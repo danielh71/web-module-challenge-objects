@@ -10,8 +10,9 @@ function createMenuItem(name, price, category){
   return {name, price, category};
 }
 
-
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+console.log("---Task 1b---");
 
 console.log(createMenuItem("Sandwich", 10, "Lunch"));
 console.log(createMenuItem("Pizza", 10, "Dinner"));
@@ -27,6 +28,8 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+
+console.log("---Task 2---");
 
 burger.discount = function(title){
   if (title === "student" || title  === "teacher"){
@@ -52,19 +55,32 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+console.log("---Task 3---");
+
 console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+
+console.log("---Task 4---");
 
 function moreReviews(array, name, rating, feedback){
   array.push({name, rating, feedback});
   return array;
 }
 
-console.log(moreReviews(reviews, "Daniel", 3, "Not amazing, but not bad.  Service was great.  Would recommend trying this place out"));
+console.log(moreReviews(reviews, "Daniel", 3, "Not amazing, but not bad.  Service was great.  Would recommend trying this place out."));
 
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+console.log("---Task 5---");
+
+function editReview(array, index, feedback){
+  array[index].feedback = feedback;
+  return array;
+}
+
+console.log(editReview(reviews, 7, "Service was great, food was okay.  Entertainment was on point!"));
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -78,10 +94,14 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
+
+console.log("---Task 6---");
+
 function getReviewByIndex(reviews, index) {
-    /* code here */
+  return reviews[index].name + " " + "gave the restaurant a" + " " + reviews[index].rating + " " + "star review and their feedback was:" + " " + reviews[index].feedback;    
   }
   
+  console.log(getReviewByIndex(reviews, 8));
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
