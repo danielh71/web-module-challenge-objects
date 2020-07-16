@@ -125,7 +125,8 @@ function getLastReview(array) {
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
-/** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
+/** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should 
+ * accept: 
 
   (1) An array of objects
   (2) A rating
@@ -137,10 +138,23 @@ function getLastReview(array) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+console.log("---Stretch 1---");
+
+ function getReviewByRating(array, score) {
+   let certainReviews = [];
+   for (let i = 0; i < array.length; i++){
+     if (array[i].rating >= score && array[i].rating < score + 1){
+       certainReviews.push(array[i]);
+      }
+    }
+    return certainReviews;
   }
 
+// function getReviewByRating(array, score){
+//   return array.filter(review => review.rating === score)
+// }
+
+console.log(getReviewByRating(reviews, 4));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
@@ -153,8 +167,8 @@ and should return an array of objects.
   For example, invoking getLongReviews(reviews) would return [
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
-    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and 
-    not for me, but I think some would like it." }]
+    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere 
+    is polarizing, and not for me, but I think some would like it." }]
 */
   function getLongReviews(/* code here */) {
     /* code here */
