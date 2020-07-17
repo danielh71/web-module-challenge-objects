@@ -170,10 +170,20 @@ and should return an array of objects.
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere 
     is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
-    /* code here */
-  }
+
+// console.log("---Stretch 2---");
+
+//   function getLongReviews(array) {
+//     let longReviews = [];
+//     for (let i = 0; i < array.length; i++){
+//       if (array[i].feedback > 15){
+//         longReviews.push(array[i]);
+//       }
+//       return longReviews;
+//     }
+//   }
   
+  // console.log(getLongReviews(reviews));
 
 /* STRETCH 3:  This challenge is not related to the data above! 
 
